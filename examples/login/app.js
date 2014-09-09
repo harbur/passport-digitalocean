@@ -3,12 +3,8 @@ var express = require('express')
   , util = require('util')
   , DigitalOceanStrategy = require('passport-digitalocean').Strategy;
 
-// var DIGITALOCEAN_CLIENT_ID = "--insert-digitalocean-client-id-here--"
-// var DIGITALOCEAN_CLIENT_SECRET = "--insert-digitalocean-client-secret-here--";
-
-var DIGITALOCEAN_CLIENT_ID = "197e8e688f766b4c7ccab7381d8d2e8330a4b97ff4394a4134c9add32355b149"
-var DIGITALOCEAN_CLIENT_SECRET = "1db2144337fc0eeaa7d8a569689f00ca82b0cb9073f32e3874c18c56fa48e665";
-
+var DIGITALOCEAN_CLIENT_ID = "--insert-digitalocean-client-id-here--"
+var DIGITALOCEAN_CLIENT_SECRET = "--insert-digitalocean-client-secret-here--";
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -34,7 +30,6 @@ passport.use(new DigitalOceanStrategy({
     clientID: DIGITALOCEAN_CLIENT_ID,
     clientSecret: DIGITALOCEAN_CLIENT_SECRET,
     callbackURL: "http://127.0.0.1:3000/auth/digitalocean/callback",
-    // callbackURL: "https://harbur.io/auth/digitalocean/callback",
     scope: "read write"
   },
   function(accessToken, refreshToken, profile, done) {
