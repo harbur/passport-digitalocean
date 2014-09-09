@@ -1,4 +1,4 @@
-# Passport-GitHub
+# Passport-DigitalOcean
 
 [Passport](http://passportjs.org/) strategy for authenticating with [DigitalOcean](https://www.digitalocean.com/)
 using the OAuth 2.0 API.
